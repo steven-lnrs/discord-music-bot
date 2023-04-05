@@ -8,10 +8,9 @@ from discord import FFmpegPCMAudio
 from discord import TextChannel
 from youtube_dl import YoutubeDL
 
-client = commands.Bot(command_prefix='.', permissions smth smth)  # prefix our commands with '.'
+client = commands.Bot(command_prefix='calm ', intents = discord.Intents.all())  
 
 players = {}
-
 
 @client.event  # check if bot is ready
 async def on_ready():
@@ -79,3 +78,19 @@ async def stop(ctx):
     if voice.is_playing():
         voice.stop()
         await ctx.send('Stopping...')
+    else:
+        await ctx.send('voice not found')
+
+
+@client.command()
+async def clear(ctx, amount=5):
+    await ctx.channel.purge(limit=amount)
+    await ctx.send("Messages have been cleared")
+
+
+client.run(token)
+        
+        
+        
+        
+        

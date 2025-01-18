@@ -1,5 +1,3 @@
-#here we go again
-#made by unusually_calm#8486
 import discord
 import os
 from discord.ext import commands

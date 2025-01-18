@@ -6,7 +6,7 @@ from discord import FFmpegPCMAudio
 from discord import TextChannel
 from youtube_dl import YoutubeDL
 
-client = commands.Bot(command_prefix='calm ', intents = discord.Intents.all())  
+client = commands.Bot(command_prefix='!', intents = discord.Intents.all())  
 
 players = {}
 
